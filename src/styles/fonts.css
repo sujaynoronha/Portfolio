@@ -1,0 +1,164 @@
+/* Import Google Font Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+/* Figma-style font mapping */
+
+/* JetBrains Mono:Light */
+@font-face {
+  font-family: 'JetBrains Mono:Light';
+  src: local('JetBrains Mono Light'), local('JetBrainsMono-Light'), local('JetBrains Mono'), url('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flQyxFs4FN_i_J0G1-w.woff2') format('woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'JetBrains_Mono:Light';
+  src: local('JetBrains Mono Light'), local('JetBrainsMono-Light'), local('JetBrains Mono'), url('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flQyxFs4FN_i_J0G1-w.woff2') format('woff2');
+  font-weight: 300;
+}
+
+
+/* Inter:Regular */
+@font-face {
+  font-family: 'Inter:Regular';
+  src: local('Inter Regular'), local('Inter-Regular'), local('Inter'), url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.woff2') format('woff2');
+  font-weight: 400;
+}
+
+/* SF Pro:Regular */
+@font-face {
+  font-family: 'SF Pro:Regular';
+  src: local('SF Pro Regular'), local('SFPro-Regular'), local('.SFNS-Regular'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro:Regular';
+  src: local('SF Pro Regular'), local('SFPro-Regular'), local('.SFNS-Regular'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+
+/* SF Pro Display:Regular */
+@font-face {
+  font-family: 'SF Pro Display:Regular';
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), local('.SFNSDisplay-Regular'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro_Display:Regular';
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), local('.SFNSDisplay-Regular'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+
+/* SF Pro Display:Medium */
+@font-face {
+  font-family: 'SF Pro Display:Medium';
+  src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'), local('.SFNSDisplay-Medium'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF_Pro_Display:Medium';
+  src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'), local('.SFNSDisplay-Medium'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 500;
+}
+
+/* SF Pro Display:Semibold */
+@font-face {
+  font-family: 'SF Pro Display:Semibold';
+  src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'), local('.SFNSDisplay-Semibold'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF_Pro_Display:Semibold';
+  src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'), local('.SFNSDisplay-Semibold'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+
+/* SF Pro Text:Regular */
+@font-face {
+  font-family: 'SF Pro Text:Regular';
+  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('.SFNSText-Regular'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro_Text:Regular';
+  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('.SFNSText-Regular'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+
+/* SF Pro Text:Semibold */
+@font-face {
+  font-family: 'SF Pro Text:Semibold';
+  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('.SFNSText-Semibold'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF_Pro_Text:Semibold';
+  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('.SFNSText-Semibold'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+
+/* Standard SF Pro Display (mapped by font-weight) */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), local('.SFNSDisplay-Regular'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'), local('.SFNSDisplay-Medium'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'), local('.SFNSDisplay-Semibold'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF_Pro_Display';
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), local('.SFNSDisplay-Regular'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro_Display';
+  src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'), local('.SFNSDisplay-Medium'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF_Pro_Display';
+  src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'), local('.SFNSDisplay-Semibold'), local('SF Pro Display'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+
+/* Standard SF Pro Text (mapped by font-weight) */
+@font-face {
+  font-family: 'SF Pro Text';
+  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('.SFNSText-Regular'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('.SFNSText-Semibold'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF_Pro_Text';
+  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('.SFNSText-Regular'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro_Text';
+  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('.SFNSText-Semibold'), local('SF Pro Text'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-weight: 600;
+}
+
+/* Standard SF Pro (mapped by font-weight) */
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Regular'), local('SFPro-Regular'), local('.SFNS-Regular');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF_Pro';
+  src: local('SF Pro Regular'), local('SFPro-Regular'), local('.SFNS-Regular');
+  font-weight: 400;
+}
+
