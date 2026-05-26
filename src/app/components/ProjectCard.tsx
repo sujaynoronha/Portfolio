@@ -207,7 +207,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             zIndex: 999999,
             background: '#f60',
             borderRadius: 45,
-            padding: '20px',
+            padding: '10px 12px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
