@@ -14,7 +14,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     // 3.4s: Animation complete, unmount component
     const timer = setTimeout(() => {
       onComplete();
-    }, 2600);
+    }, 3400);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -23,7 +23,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     <div
       className="fixed inset-0 z-[9999] select-none overflow-hidden pointer-events-auto"
       style={{
-        animation: 'mainFadeOut 0.4s cubic-bezier(0.25, 1, 0.5, 1) 2.2s forwards',
+        animation: 'mainFadeOut 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2.8s forwards',
       }}
     >
       {/* Styles for Animations */}
@@ -99,7 +99,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         className="absolute inset-0 bg-[#f7f5f3] flex items-center justify-center overflow-hidden"
         style={{
           clipPath: 'inset(0 100% 0 0)',
-          animation: 'sweepReveal 1.0s cubic-bezier(0.86, 0, 0.07, 1) 0.8s forwards',
+          animation: 'sweepReveal 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
         }}
       >
         {/* Child container matches screen dimensions to prevent layout shifting during clip-path wipe */}
