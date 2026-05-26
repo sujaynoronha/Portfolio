@@ -32,9 +32,13 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           from { opacity: 0; }
           to { opacity: 1; }
         }
-        @keyframes sweepReveal {
-          from { clip-path: inset(0 100% 0 0); }
-          to { clip-path: inset(0 0 0 0); }
+        @keyframes parentReveal {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(0%); }
+        }
+        @keyframes childCounter {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0%); }
         }
         @keyframes mainFadeOut {
           0% { opacity: 1; pointer-events: auto; }
@@ -98,12 +102,20 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
       <div
         className="absolute inset-0 bg-[#f7f5f3] flex items-center justify-center overflow-hidden"
         style={{
-          clipPath: 'inset(0 100% 0 0)',
-          animation: 'sweepReveal 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
+          border: 'none',
+          transform: 'translateX(-100%)',
+          animation: 'parentReveal 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
         }}
       >
-        {/* Child container matches screen dimensions to prevent layout shifting during clip-path wipe */}
-        <div className="absolute inset-0 flex items-center justify-center w-screen h-screen">
+        {/* Child container matches screen dimensions to prevent layout shifting during translation wipe */}
+        <div
+          className="absolute inset-0 flex items-center justify-center w-screen h-screen"
+          style={{
+            border: 'none',
+            transform: 'translateX(100%)',
+            animation: 'childCounter 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
+          }}
+        >
           <div className="flex flex-col gap-[24px] items-center text-[#1e1e1e] w-[440px] max-w-full text-center">
             <p
               className="font-medium text-[24px] leading-normal"
