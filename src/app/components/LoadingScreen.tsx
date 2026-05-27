@@ -24,6 +24,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
       className="fixed inset-0 z-[9999] select-none overflow-hidden pointer-events-auto"
       style={{
         animation: 'mainFadeOut 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2.8s forwards',
+        backgroundColor: '#000000',
       }}
     >
       {/* Styles for Animations */}
@@ -33,12 +34,12 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           to { opacity: 1; }
         }
         @keyframes parentReveal {
-          from { transform: translateX(-100%); }
-          to { transform: translateX(0%); }
+          from { transform: translateX(-101%); }
+          to { transform: translateX(-0.5%); }
         }
         @keyframes childCounter {
-          from { transform: translateX(100%); }
-          to { transform: translateX(0%); }
+          from { transform: translateX(101%); }
+          to { transform: translateX(0.5%); }
         }
         @keyframes mainFadeOut {
           0% { opacity: 1; pointer-events: auto; }
@@ -100,11 +101,21 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
       {/* Screen 2: Light reveal layer (#f7f5f3 background) */}
       <div
-        className="absolute inset-0 bg-[#f7f5f3] flex items-center justify-center overflow-hidden"
+        className="absolute flex items-center justify-center overflow-hidden"
         style={{
+          top: '-2px',
+          left: '-4px',
+          right: '-4px',
+          bottom: '-2px',
+          backgroundColor: '#f7f5f3',
           border: 'none',
-          transform: 'translateX(-100%)',
+          outline: 'none',
+          boxShadow: 'none',
+          transform: 'translateX(-101%)',
           animation: 'parentReveal 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
         }}
       >
         {/* Child container matches screen dimensions to prevent layout shifting during translation wipe */}
@@ -112,8 +123,12 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           className="absolute inset-0 flex items-center justify-center w-screen h-screen"
           style={{
             border: 'none',
-            transform: 'translateX(100%)',
+            outline: 'none',
+            transform: 'translateX(101%)',
             animation: 'childCounter 1.2s cubic-bezier(0.86, 0, 0.07, 1) 1.0s forwards',
+            willChange: 'transform',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
           }}
         >
           <div className="flex flex-col gap-[24px] items-center text-[#1e1e1e] w-[440px] max-w-full text-center">
