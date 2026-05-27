@@ -9,6 +9,8 @@
  * - The badge has z-index: 10, the navbar has z-index: 50.
  * - On mount, the badge drops in using a JS-driven spring simulation for
  *   buttery-smooth motion (inspired by Framer Motion spring physics).
+ * - The spring animation waits for the badge image to be fully loaded and
+ *   decoded before starting, ensuring smooth first-load experience.
  */
 import { useState, useEffect, useRef, useCallback } from 'react';
 import badgeImg from '../../assets/badge.png';
@@ -61,9 +63,11 @@ function springRotation(t: number): number {
 
 export function AboutPage() {
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const rafRef = useRef(0);
   const [navHeight, setNavHeight] = useState(0);
   const [ready, setReady] = useState(false);
+  const animStartedRef = useRef(false);
 
   const animate = useCallback(() => {
     const el = wrapperRef.current;
@@ -103,6 +107,18 @@ export function AboutPage() {
     rafRef.current = requestAnimationFrame(tick);
   }, []);
 
+  // Start animation only when the image is fully loaded + decoded
+  const startAnimation = useCallback(() => {
+    if (animStartedRef.current) return;
+    animStartedRef.current = true;
+
+    // Wait one frame for layout, then start the spring
+    requestAnimationFrame(() => {
+      setReady(true);
+      animate();
+    });
+  }, [animate]);
+
   useEffect(() => {
     // Measure navbar
     const navEl = document.querySelector('.sticky.top-0.z-50');
@@ -110,14 +126,30 @@ export function AboutPage() {
       setNavHeight(navEl.getBoundingClientRect().height);
     }
 
-    // Wait one frame for layout, then start the spring
-    requestAnimationFrame(() => {
-      setReady(true);
-      animate();
-    });
+    // Check if the image is already loaded (e.g. preloaded by App.tsx)
+    const imgEl = imgRef.current;
+    if (imgEl && imgEl.complete && imgEl.naturalHeight > 0) {
+      // Image already cached — decode it and start immediately
+      if (imgEl.decode) {
+        imgEl.decode().then(startAnimation).catch(startAnimation);
+      } else {
+        startAnimation();
+      }
+    }
+    // If not loaded yet, the onLoad handler on the <img> will trigger it
 
     return () => cancelAnimationFrame(rafRef.current);
-  }, [animate]);
+  }, [animate, startAnimation]);
+
+  const handleImageLoad = useCallback(() => {
+    const imgEl = imgRef.current;
+    if (imgEl && imgEl.decode) {
+      // Decode off main thread, then animate
+      imgEl.decode().then(startAnimation).catch(startAnimation);
+    } else {
+      startAnimation();
+    }
+  }, [startAnimation]);
 
   return (
     <div
@@ -149,8 +181,13 @@ export function AboutPage() {
         }}
       >
         <img
+          ref={imgRef}
           alt="Hi, I'm Sujay — Product Designer badge with lanyard"
           src={badgeImg}
+          // @ts-ignore — fetchpriority is valid HTML but not in React's types yet
+          fetchpriority="high"
+          decoding="async"
+          onLoad={handleImageLoad}
           style={{
             position: 'absolute',
             inset: 0,
@@ -174,13 +211,13 @@ export function AboutPage() {
         }}
       >
         <p className="m-0">
-          👋 Hey there! I’m Sujay, a product designer, creator, and strategic problem solver.
+          👋 Hey there! I'm Sujay, a product designer, creator, and strategic problem solver.
         </p>
         <p className="m-0">
           My journey into design began with creative experimentation - editing photos, producing music videos, and diving deep into game design and development. Building interactive experiences early on taught me how to capture attention and design for pure user engagement.
         </p>
         <p className="m-0">
-          Today, I look beyond the screen. My past experiences have taught me to connect design decisions directly to business outcomes, product metrics, and sustainable growth. Currently, I’m focusing on designing for conversational AI.
+          Today, I look beyond the screen. My past experiences have taught me to connect design decisions directly to business outcomes, product metrics, and sustainable growth. Currently, I'm focusing on designing for conversational AI.
         </p>
       </div>
     </div>

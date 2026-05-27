@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # Scratch / temp
 scratch/
+src/assets/badge_original_backup.png
