@@ -90,8 +90,8 @@ export function Hero() {
         </div>
 
         <div className="content-stretch flex flex-col md:gap-[12px] gap-[2px] items-center not-italic relative shrink-0 text-[#1e1e1e] text-center whitespace-nowrap">
-          <p className="font-['Anthropic_Serif_Display:Medium',Georgia,serif] font-medium leading-[normal] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[1.92px] tracking-[0.64px]">Creating Engaging experiences for</p>
-          <p className="font-['Anthropic_Serif_Display:Medium',Georgia,serif] font-medium leading-[0] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[0.96px] tracking-[0.64px]">
+          <p className="font-['Instrument_Serif:Regular',Georgia,serif] font-normal leading-[normal] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[1.92px] tracking-[0.64px]">Creating Engaging experiences for</p>
+          <p className="font-['Instrument_Serif:Regular',Georgia,serif] font-normal leading-[0] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[0.96px] tracking-[0.64px]">
             <span className="[text-decoration-skip-ink:none] decoration-solid leading-[normal] line-through md:text-[48px] text-[32px]">Users</span>
             <span className="leading-[normal] md:text-[48px] text-[32px]"> </span>
             <span className="leading-[normal] text-[#f60] md:text-[48px] text-[32px]">People</span>

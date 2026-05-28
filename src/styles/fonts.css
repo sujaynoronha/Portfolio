@@ -1,6 +1,7 @@
 /* Import Google Font Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
 
 /* Figma-style font mapping */
 
@@ -171,4 +172,16 @@
   font-family: 'Anthropic_Serif_Display:Medium';
   src: local('Anthropic Serif Display Medium'), local('AnthropicSerifDisplay-Medium'), local('Anthropic Serif Display'), Georgia, serif;
   font-weight: 500;
+}
+
+/* Instrument Serif:Regular */
+@font-face {
+  font-family: 'Instrument Serif:Regular';
+  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), serif;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Instrument_Serif:Regular';
+  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), serif;
+  font-weight: 400;
 }
