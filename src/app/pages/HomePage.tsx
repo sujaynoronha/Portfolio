@@ -73,7 +73,7 @@ export function HomePage() {
         {/* Sticky container that stays centered while scrolling */}
         <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center">
           
-          <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[32px] whitespace-nowrap mb-[48px]">
+          <p className="font-instrument font-normal leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[32px] md:text-[40px] whitespace-nowrap mb-[48px]">
             Featured Work
           </p>
 
