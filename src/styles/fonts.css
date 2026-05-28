@@ -177,11 +177,13 @@
 /* Instrument Serif:Regular */
 @font-face {
   font-family: 'Instrument Serif:Regular';
-  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), serif;
+  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), url('https://fonts.gstatic.com/s/instrumentserif/v2/L0xyDFM252t_525t3e1aSF-0.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Instrument_Serif:Regular';
-  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), serif;
+  src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'), local('Instrument Serif'), url('https://fonts.gstatic.com/s/instrumentserif/v2/L0xyDFM252t_525t3e1aSF-0.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
 }
