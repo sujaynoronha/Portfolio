@@ -89,12 +89,12 @@ export function Hero() {
           <p className="font-['SF_Pro_Text:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 md:text-[20px] text-[12px] text-[rgba(30,30,30,0.82)] text-left md:w-[165px] w-[99px] whitespace-nowrap">Product Designer</p>
         </div>
 
-        <div className="content-stretch flex flex-col md:gap-[12px] gap-[2px] items-center not-italic relative shrink-0 text-[#1e1e1e] text-center md:tracking-[0.84px] tracking-[0.64px] whitespace-nowrap">
-          <p className="font-['SF_Pro_Display:Semibold',sans-serif] font-semibold leading-[normal] relative shrink-0 md:text-[42px] text-[32px] md:tracking-[0.84px] tracking-[0.64px]">Creating Engaging experiences for</p>
-          <p className="font-['SF_Pro_Display:Semibold',sans-serif] font-semibold leading-[0] relative shrink-0 md:text-[42px] text-[32px] md:tracking-[0.84px] tracking-[0.64px]">
-            <span className="[text-decoration-skip-ink:none] decoration-solid leading-[normal] line-through tracking-[0.32px] md:text-[42px] text-[32px]">Users</span>
-            <span className="leading-[normal] md:text-[42px] text-[32px]"> </span>
-            <span className="leading-[normal] text-[#f60] tracking-[0.32px] md:text-[42px] text-[32px]">People</span>
+        <div className="content-stretch flex flex-col md:gap-[12px] gap-[2px] items-center not-italic relative shrink-0 text-[#1e1e1e] text-center whitespace-nowrap">
+          <p className="font-['Anthropic_Serif_Display:Medium',Georgia,serif] font-medium leading-[normal] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[1.92px] tracking-[0.64px]">Creating Engaging experiences for</p>
+          <p className="font-['Anthropic_Serif_Display:Medium',Georgia,serif] font-medium leading-[0] relative shrink-0 md:text-[48px] text-[32px] md:tracking-[0.96px] tracking-[0.64px]">
+            <span className="[text-decoration-skip-ink:none] decoration-solid leading-[normal] line-through md:text-[48px] text-[32px]">Users</span>
+            <span className="leading-[normal] md:text-[48px] text-[32px]"> </span>
+            <span className="leading-[normal] text-[#f60] md:text-[48px] text-[32px]">People</span>
           </p>
         </div>
 

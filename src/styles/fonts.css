@@ -161,4 +161,14 @@
   src: local('SF Pro Regular'), local('SFPro-Regular'), local('.SFNS-Regular');
   font-weight: 400;
 }
-
+/* Anthropic Serif Display:Medium */
+@font-face {
+  font-family: 'Anthropic Serif Display:Medium';
+  src: local('Anthropic Serif Display Medium'), local('AnthropicSerifDisplay-Medium'), local('Anthropic Serif Display'), Georgia, serif;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Anthropic_Serif_Display:Medium';
+  src: local('Anthropic Serif Display Medium'), local('AnthropicSerifDisplay-Medium'), local('Anthropic Serif Display'), Georgia, serif;
+  font-weight: 500;
+}
